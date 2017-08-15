@@ -2,7 +2,7 @@
     "name": "hzted123/taobao-sdk",
     "description": "淘宝sdk",
     "type": "library",
-    "keywords": ["taobao","sdk"],
+    "keywords": ["taobao","sdk","yii2"],
     "license": "MIT",
     "authors": [
         {
@@ -10,6 +10,9 @@
             "email": "hzted123@gmail.com"
         }
     ],
+    "require": {
+        "yiisoft/yii2": "*"
+    },
     "autoload": {
         "psr-4": {
             "hzted123\\taobaosdk\\": ""

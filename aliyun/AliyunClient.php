@@ -228,6 +228,13 @@ class AliyunClient
 				curl_setopt($ch, CURLOPT_POSTFIELDS, substr($postBodyString,0,-1));
 			}
 		}
+
+        if (isset(\Yii::$app->params['http_proxy'])){
+            curl_setopt($ch, CURLOPT_AUTOREFERER, 1);
+            curl_setopt($ch, CURLOPT_HEADER, false);
+            curl_setopt($ch, CURLOPT_PROXY, \Yii::$app->params['http_proxy']);
+        }
+
 		$reponse = curl_exec($ch);
 		
 		if (curl_errno($ch))
